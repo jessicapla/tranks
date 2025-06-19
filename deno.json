@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@danet/cli": "jsr:@danet/cli@^0.10.0"
+  }
+}
