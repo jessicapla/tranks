@@ -2,12 +2,28 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "target": "ES2022", // Or a recent ES version supported by Deno
+    "lib": ["esnext", "dom", "dom.iterable"], // Important for Node.js APIs and browser environments
+    "module": "esnext", // Or "Node16" if you encounter specific issues with ESM resolution
+    "moduleResolution": "node", // Crucial for resolving npm packages
+    "allowSyntheticDefaultImports": true, // Helps with default imports from CommonJS modules
+    "forceConsistentCasingInFileNames": true, // Good practice for cross-platform consistency
+    "noEmit": true, // Deno handles compilation, so you typically don't want TypeScript to emit files
+    "strict": true, // Recommended for better type safety
+    "types": ["npm:@types/node"], // If you need Node.js specific global types (e.g., for 'process')
     "plugins": [
       {
         "name": "typescript-deno-plugin",
         "enable": true,
-        "importmap": "import_map.json"
+        "import": "deno.json"
       }
     ]
+  },
+  "deno": {
+    "nodeModulesDir": "auto", // Crucial for Deno to automatically create and manage `node_modules`
+    "imports": {
+      // Example: If you need to map specific npm packages to the npm: specifier
+      // "my-npm-package": "npm:my-npm-package@^1.0.0"
+    }
   }
 }
