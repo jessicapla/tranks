@@ -2,8 +2,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=deno,vue,node,turbo
 
 ### Deno ###
-/.idea/
-/.vscode/
+*/.idea/*
+*/.vscode/*
 
 /node_modules
 
