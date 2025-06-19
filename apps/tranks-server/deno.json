@@ -8,7 +8,10 @@
   },
   "fmt": {
     "options": {
-      "singleQuote": true
+      "indentWidth": 2,
+      "lineWidth": 80,
+      "semiColons": true,
+      "singleQuote": false
     }
   },
   "compilerOptions": {
@@ -25,6 +28,7 @@
     "@std/testing": "jsr:@std/testing@1.0.3"
   },
   "tasks": {
+    "dev": "deno run --watch --allow-net --allow-read --unstable --allow-env run.ts",
     "launch-server": "deno run --allow-net --allow-read --unstable --allow-env run.ts",
     "test": "deno test -A --unstable spec"
   }
