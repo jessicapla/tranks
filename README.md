@@ -4,8 +4,8 @@ Tranks is a personal finance application.
 
 ## Stack Overview
 
-* **Backend:** Deno, Danet (Framework), Drizzle (ORM)
-* **Frontend:** Vue 3, Vite, shadcn/vue
+* **Backend: in progress with** Deno, Danet (Framework), Drizzle (ORM)
+* **Frontend: initialized with** Vue 3, Vite, shadcn/vue
 * **Monorepo Tooling:** pnpm (package manager), Turborepo (build system & task orchestration -- soon)
 
 ## Structure
