@@ -1,5 +1,5 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
     "jsr:@bartlomieju/postgres@*": "0.17.2",
     "jsr:@danet/core@2": "2.4.3",
@@ -21,6 +21,7 @@
     "jsr:@std/crypto@~0.220.1": "0.220.1",
     "jsr:@std/datetime@0.213.1": "0.213.1",
     "jsr:@std/dotenv@0.225.2": "0.225.2",
+    "jsr:@std/dotenv@~0.225.3": "0.225.5",
     "jsr:@std/encoding@0.213.1": "0.213.1",
     "jsr:@std/encoding@~0.220.1": "0.220.1",
     "jsr:@std/fmt@0.213.1": "0.213.1",
@@ -126,6 +127,9 @@
     "@std/dotenv@0.225.2": {
       "integrity": "e2025dce4de6c7bca21dece8baddd4262b09d5187217e231b033e088e0c4dd23"
     },
+    "@std/dotenv@0.225.5": {
+      "integrity": "9ce6f9d0ec3311f74a32535aa1b8c62ed88b1ab91b7f0815797d77a6f60c922f"
+    },
     "@std/encoding@0.213.1": {
       "integrity": "fcbb6928713dde941a18ca5db88ca1544d0755ec8fb20fe61e2dc8144b390c62"
     },
@@ -181,9 +185,12 @@
         "minimist",
         "neo-async",
         "source-map",
-        "uglify-js",
         "wordwrap"
-      ]
+      ],
+      "optionalDependencies": [
+        "uglify-js"
+      ],
+      "bin": true
     },
     "minimist@1.2.8": {
       "integrity": "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA=="
@@ -198,10 +205,22 @@
       "integrity": "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
     },
     "uglify-js@3.19.3": {
-      "integrity": "sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ=="
+      "integrity": "sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==",
+      "bin": true
     },
     "wordwrap@1.0.0": {
       "integrity": "sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q=="
     }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@bartlomieju/postgres@*",
+      "jsr:@danet/core@2",
+      "jsr:@danet/swagger@2",
+      "jsr:@db/mongo@0.33.0",
+      "jsr:@std/assert@1.0.6",
+      "jsr:@std/dotenv@~0.225.3",
+      "jsr:@std/testing@1.0.3"
+    ]
   }
 }

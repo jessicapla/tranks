@@ -1,6 +1,6 @@
-import { HttpContext, Logger, NextFunction } from '@danet/core';
+import { HttpContext, Logger, NextFunction } from "@danet/core";
 
-const logger = new Logger('Logger');
+const logger = new Logger("Logger");
 
 export const loggerMiddleware = async (
   ctx: HttpContext,

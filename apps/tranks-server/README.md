@@ -4,7 +4,7 @@ The API backend for the Tranks Personal Finance Application.
 
 ## Technologies
 
-* Deno Runtime
-* Danet Framework
-* Drizzle ORM
-* PostgreSQL
+- Deno Runtime
+- Danet Framework
+- Drizzle ORM
+- PostgreSQL
