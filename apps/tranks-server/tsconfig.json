@@ -10,7 +10,6 @@
     "forceConsistentCasingInFileNames": true, // Good practice for cross-platform consistency
     "noEmit": true, // Deno handles compilation, so you typically don't want TypeScript to emit files
     "strict": true, // Recommended for better type safety
-    "types": ["npm:@types/node"], // If you need Node.js specific global types (e.g., for 'process')
     "plugins": [
       {
         "name": "typescript-deno-plugin",
@@ -19,11 +18,20 @@
       }
     ]
   },
-  "deno": {
-    "nodeModulesDir": "auto", // Crucial for Deno to automatically create and manage `node_modules`
-    "imports": {
-      // Example: If you need to map specific npm packages to the npm: specifier
-      // "my-npm-package": "npm:my-npm-package@^1.0.0"
-    }
-  }
+  "paths": { // for node modules imports in Deno
+    "dotenv": ["./node_modules/dotenv"],
+    "drizzle-orm/pg-core": ["./node_modules/drizzle-orm/pg-core"],
+    "drizzle-orm": ["./node_modules/drizzle-orm"],
+    "drizzle-kit": ["./node_modules/drizzle-kit"],
+    "pg": ["./node_modules/pg"],
+    "zod": ["./node_modules/zod"]
+  },
+  "include": [
+    "src/**/*",
+    "run.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

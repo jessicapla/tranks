@@ -1,5 +1,14 @@
 {
   "imports": {
-    "@danet/cli": "jsr:@danet/cli@^0.10.0"
+    "@bartlomieju/postgres": "jsr:@bartlomieju/postgres@^0.17.2",
+    "@danet/cli": "jsr:@danet/cli@^0.10.0",
+    "@danet/core": "jsr:@danet/core@^2.9.4",
+    "@danet/swagger": "jsr:@danet/swagger@^2.3.2",
+    "@danet/validatte": "jsr:@danet/validatte@^0.7.9",
+    "@std/dotenv": "jsr:@std/dotenv@^0.225.5",
+    "@types/pg": "npm:@types/pg@^8.15.4",
+    "drizzle-kit": "npm:drizzle-kit@^0.31.1",
+    "drizzle-orm": "npm:drizzle-orm@^0.44.2",
+    "pg": "npm:pg@^8.16.2"
   }
 }
